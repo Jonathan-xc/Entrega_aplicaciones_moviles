@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".RegistroActivity">
+
+    <!-- Campos de entrada para Login -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/aclonica"
+        android:onClick="onRegisterSelected"
+        android:text="Registro"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toEndOf="@+id/dividerLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <View
+        android:id="@+id/dividerLine"
+        android:layout_width="3dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="204dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/emailLoginInput"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="35dp"
+        android:background="#AFFFFFFF"
+        android:hint="Correo Electrónico"
+        android:textColor="#000000"
+        android:textColorHint="#E5404040"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+    <EditText
+        android:id="@+id/usernameRegisterInput"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="35dp"
+        android:background="#AFFFFFFF"
+        android:hint="Nombre de Usuario"
+        android:textColor="#000000"
+        android:textColorHint="#E5404040"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+    <EditText
+        android:id="@+id/emailRegisterInput"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:background="#AFFFFFFF"
+        android:hint="Correo Electrónico"
+        android:textColor="#000000"
+        android:textColorHint="#E5404040"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameRegisterInput" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/aclonica"
+        android:onClick="onLoginSelected"
+        android:text="Login"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/dividerLine"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <EditText
+        android:id="@+id/passwordLoginInput"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:background="#AFFFFFFF"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#E5404040"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLoginInput" />
+
+    <!-- Campos de entrada para Registro -->
+
+    <EditText
+        android:id="@+id/passwordRegisterInput"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:background="#AFFFFFFF"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#E5404040"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailRegisterInput" />
+
+    <!-- Botón para Registrarse -->
+
+    <Button
+        android:id="@+id/loginSubmitButton"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="156dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="Iniciar sesión"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLoginInput" />
+
+    <Button
+        android:id="@+id/registerSubmitButton"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="104dp"
+        android:backgroundTint="@null"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="Registrarse"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordRegisterInput" />
+
+    <!-- Botón para Mostrar Usuarios -->
+    <Button
+        android:id="@+id/showUsersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Mostrar Usuarios"
+        app:layout_constraintTop_toBottomOf="@+id/registerSubmitButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
